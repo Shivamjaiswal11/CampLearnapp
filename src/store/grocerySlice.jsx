@@ -1,3 +1,5 @@
+import { reset } from "./actions";
+
 const { createSlice, nanoid } = require("@reduxjs/toolkit");
 
 
@@ -16,6 +18,11 @@ reducers:{
             name:action.payload
         })
     }
+},
+extraReducers(builder){
+    builder.addCase(reset.toString(),(state, action) =>{
+        return [];
+    })
 }
 
 })

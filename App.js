@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import HomeScreen from './src/screens/HomeScreen'
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
+    <View style={{flex:1}}>
+      <HomeScreen/>
+      {/* <Text>App</Text> */}
     </View>
   )
 }
