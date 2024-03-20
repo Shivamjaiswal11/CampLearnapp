@@ -4,9 +4,14 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const getAllProduct = createApi({
     reducerPath: 'getallproduct',
     baseQuery: fetchBaseQuery({ baseUrl: 'https://dummyjson.com' }),
+    tagTypes: ['Productstype'],
     endpoints: (builder) => ({
         getallproduct: builder.query({
-        providesTags:["Productstype"],
+          providesTags: (result, error, arg) =>
+          result
+            ? [...result.map(({ id }) => ({ type: 'Productstype', id })), 'Productstype']
+            : ['Productstype'],
+    
         
         query: () => {
             return {
