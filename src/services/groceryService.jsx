@@ -9,7 +9,7 @@ export const getAllProduct = createApi({
         getallproduct: builder.query({
           providesTags: (result, error, arg) =>
           result
-            ? [...result.map(({ id }) => ({ type: 'Productstype', id })), 'Productstype']
+            ? [...result.map(({ id }) => ({ type: 'Productstype', id:123 })), 'Productstype']
             : ['Productstype'],
     
         

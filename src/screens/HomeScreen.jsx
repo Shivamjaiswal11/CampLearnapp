@@ -26,7 +26,7 @@ const HomeScreen = () => {
     }
     // console.log('groceries',groceries)
     const addNewGrocery = () => {
-        addnewproduct({ title: 'BMW Pencil' })
+        // addnewproduct({ title: 'BMW Pencil' })
         return
         if (!grociesitem?.trim()) {
             Alert.alert('Please enter grocery name')

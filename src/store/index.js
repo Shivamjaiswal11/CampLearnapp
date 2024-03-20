@@ -3,11 +3,14 @@ import { groceryReducer } from "./grocerySlice";
 import { bucketReducer } from "./bucketSlice";
 import { getAllProduct } from "../services/groceryService";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import { todoReducer } from "./todoSlice";
+
 
 export const store = configureStore({
     reducer:{
         groceries:groceryReducer,
         mybuckets:bucketReducer,
+        todos:todoReducer,
         [getAllProduct.reducerPath]:getAllProduct.reducer
     },
     middleware: (getDefaultMiddleware) =>
