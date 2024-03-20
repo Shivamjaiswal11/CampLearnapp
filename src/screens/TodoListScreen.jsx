@@ -2,7 +2,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View,
 import React, { useState } from 'react'
 import { reset } from '../store/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo,deleteTodo, editTodo } from '../store/todoSlice';
+import { addTodo, deleteTodo, editTodo } from '../store/todoSlice';
 
 const TodoListScreen = () => {
     const todos = useSelector(state => state.todos)
@@ -32,21 +32,21 @@ const TodoListScreen = () => {
 
     }
     const DeletecurrentTodo = (id) => {
-        console.log('Deleting current',id)
-          dispatch(deleteTodo(id))
+        console.log('Deleting current', id)
+        dispatch(deleteTodo(id))
     }
     const SelectUpdatecurrentTodo = (todo) => {
         setcurrenttodo(todo?.title)
         setcurrentSelecttodo(todo?.id)
-       
+
 
     }
 
     const UpdatecurrentTodo = () => {
-        dispatch(editTodo({id:currentSelecttodo,title:currenttodo}))
+        dispatch(editTodo({ id: currentSelecttodo, title: currenttodo }))
         setcurrenttodo('')
         setcurrentSelecttodo(null)
-       
+
 
     }
     return (
@@ -63,7 +63,7 @@ const TodoListScreen = () => {
                     onPress={currentSelecttodo ? UpdatecurrentTodo : addNewTodo}
                     style={{ width: '25%', backgroundColor: 'blue', alignItems: 'center', padding: 10 }}
                 >
-                    <Text style={darkScheme}>{currentSelecttodo ? "UPDATE" :"ADD"}</Text>
+                    <Text style={darkScheme}>{currentSelecttodo ? "UPDATE" : "ADD"}</Text>
                 </TouchableOpacity>
             </View>
 
@@ -75,9 +75,19 @@ const TodoListScreen = () => {
                         return (
                             <TouchableOpacity
                                 activeOpacity={1}
-                                key={todo?.id} style={{ paddingTop: 5, flexDirection: 'row', gap: 10, padding: 10, backgroundColor: 'red', justifyContent: 'space-between',alignItems:'center',marginTop:5 }}>
-                                <Text style={darkScheme} >{todo?.title}</Text>
-                                <View style={{ flexDirection: 'row' }}>
+                                key={todo?.id}
+                                style={{
+                                    paddingTop: 5,
+                                    flexDirection: 'row',
+                                    gap: 10,
+                                    padding: 10,
+                                    backgroundColor: 'red',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    marginTop: 5
+                                }}>
+                                <Text style={[darkScheme,{width:"50%"}]} >{todo?.title}</Text>
+                                <View style={{ flexDirection: 'row',width:'50%' }}>
                                     <TouchableOpacity
                                         onPress={() => DeletecurrentTodo(todo.id)}
                                         style={{ padding: 5, backgroundColor: 'green', marginRight: 6 }}  >

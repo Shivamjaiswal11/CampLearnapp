@@ -20,12 +20,11 @@ const initialState= {
             return state;
         },
         editTodo(state,action){
-            console.log(action.payload)
             let gettodos = state.todolist;
-            const newtodlistindex= state.todolist.findIndex(todo => todo.id === action.payload.id)
+            const newtodolistindex= state.todolist.findIndex(todo => todo.id === action.payload.id)
           
-              gettodos[newtodlistindex] = {
-                ...gettodos[newtodlistindex],
+              gettodos[newtodolistindex] = {
+                ...gettodos[newtodolistindex],
                   title:action.payload.title
               }
         
