@@ -27,7 +27,7 @@ const RemoveExitItem = (item)=> {
                             mybucketsiiem.map((item, index) => {
                                 return (
                                     <View key={index} style={{flexDirection:'row',padding:5 }}>
-                                        <Text style={darkScheme}>{item.name}</Text>
+                                        <Text style={darkScheme}>{item.brand}</Text>
                                         <Text style={darkScheme}> X {item.quantity}</Text>
                                         <TouchableOpacity onPress={()=>RemoveExitItem({id:item?.id})} style={{}}>
                                         <Text style={darkScheme} > - </Text>
