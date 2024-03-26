@@ -2,14 +2,15 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View,
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addGrocery, } from '../store/grocerySlice'
-import BucketItem from '../components/BucketItem'
+// import BucketItem from '../components/BucketItem'
 import { addToBucket } from '../store/bucketSlice'
 import { reset } from '../store/actions'
 import { useAddnewproductMutation, useGetallproductQuery } from '../services/groceryService'
-
+const BucketItem = React.lazy(()=> import('../components/BucketItem') );
 const HomeScreen = () => {
     const { data, error, isLoading, isError, isFetching, isSuccess } = useGetallproductQuery()
     const [addnewproduct, result] = useAddnewproductMutation();
+
 
     console.log("result", result)
     // const groceries = useSelector(state => state.groceries)

@@ -1,18 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import HomeScreen from './src/screens/HomeScreen'
-import TodoListScreen from './src/screens/TodoListScreen'
+import AppNavigator from './src/Navigation/AppNavigator'
 
 const App = () => {
   return (
     <View style={{flex:1}}>
-      <TodoListScreen/>
-      {/* <HomeScreen/> */}
-    
+     <AppNavigator/>
     </View>
   )
 }
 
-export default App
+export default App;
 
 const styles = StyleSheet.create({})
