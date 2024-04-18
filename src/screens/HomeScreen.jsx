@@ -58,7 +58,7 @@ const HomeScreen = () => {
                 <TextInput
                     value={grociesitem}
                     onChangeText={(text) => setgrociesitem(text)}
-                    style={{ width: '80%', padding: 5, ...darkSchemeBack, color: '#000' }}
+                    style={{ width: '80%', padding: 5, ...darkSchemeBack, ...darkScheme }}
                 />
                 <TouchableOpacity
                     onPress={Reset}

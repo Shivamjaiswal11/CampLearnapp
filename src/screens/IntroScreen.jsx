@@ -33,8 +33,8 @@ const items = [
   },
   {
     id: 4,
-    title: 'Item 4',
-    navigation: '',
+    title: 'ProductScreen',
+    navigation: 'ProductScreen',
     backgroundColor: '#ebf08b',
     border:'#e2ed15'
   },
