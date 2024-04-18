@@ -5,7 +5,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
-import { DevToolsBubble } from 'react-native-react-query-devtools';
+// import { DevToolsBubble } from 'react-native-react-query-devtools';
 
 const App = () => {
 
@@ -15,7 +15,7 @@ const queryClient = new QueryClient()
     <View style={{flex:1}}>
         <QueryClientProvider client={queryClient}>
         <AppNavigator/>
-        <DevToolsBubble />
+        {/* <DevToolsBubble /> */}
         </QueryClientProvider>
   
     </View>
