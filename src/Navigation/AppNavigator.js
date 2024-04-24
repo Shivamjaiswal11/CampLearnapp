@@ -8,6 +8,7 @@ import IntroScreen from '../screens/IntroScreen';
 import TestScreen from '../screens/TestScreen';
 import ProductScreen from '../screens/ProductScreen';
 import ProductByIdScreen from '../screens/ProductByIdScreen';
+import AddDynamicInputField from '../screens/AddDynamicInputField';
 
 const AppNavigator = () => {
     const Stack = createNativeStackNavigator();
@@ -22,6 +23,7 @@ const AppNavigator = () => {
                 <Stack.Screen name="ProductScreen" component={ProductScreen} />
                 <Stack.Screen name="ProductByIdScreen" component={ProductByIdScreen} />
                 <Stack.Screen name="Test" component={TestScreen} />
+                <Stack.Screen name="AddDynamicInputField" component={AddDynamicInputField} />
             </Stack.Navigator>
         </NavigationContainer>
     )

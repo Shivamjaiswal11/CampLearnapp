@@ -38,11 +38,20 @@ const items = [
     backgroundColor: '#ebf08b',
     border:'#e2ed15'
   },
-  // {
-  //   id: 5,
-  //   title: 'Item 5',
-  //   backgroundColor: 'orange',
-  // },
+  {
+    id: 5,
+    title: 'AddDynamicInputField',
+    navigation: 'AddDynamicInputField',
+    backgroundColor: 'orange',
+    border: 'orange',
+  },
+  {
+    id: 6,
+    title: 'AddDynamicInputField',
+    navigation: '',
+    backgroundColor: '#fff',
+    border: '#fff',
+  },
 ];
 
 
@@ -92,6 +101,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical:10
   },
   boxContainer: {
     marginTop: marginVertical,
